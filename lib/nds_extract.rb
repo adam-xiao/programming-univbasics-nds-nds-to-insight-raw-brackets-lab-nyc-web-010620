@@ -4,7 +4,7 @@ require 'directors_database'
 #require "pp"
 #pp directors_database
 
-puts directors_database[0]
+puts directors_database[0][:movies]
 
 def directors_totals(nds)
   # Remember, it's always OK to pretty print what you get *in* to make sure
