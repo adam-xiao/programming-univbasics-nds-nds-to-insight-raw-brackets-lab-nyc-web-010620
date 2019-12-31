@@ -22,6 +22,7 @@ def directors_totals(nds)
         director_total += nds[director_index][:movies][movie_index][:worldwide_gross]
         result < {nds[director_index][:name] => director_total}
         #result < {nds[director_index][:name] => nds[director_index][:movies][movie_index][:worldwide_gross]}
+        director_total = 0
         movie_index += 1
     end
     director_index += 1
