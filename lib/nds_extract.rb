@@ -1,8 +1,8 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 
-require "pp"
-pp directors_database
+#require "pp"
+#pp directors_database
 
 #puts directors_database[0][:movies][0][:worldwide_gross]
 
@@ -13,7 +13,12 @@ def directors_totals(nds)
   #
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
   result = {}
-  nds
+  director_index = 0
+  
+  while director_index < nds.length do
+    movie_index = 0
+    result << ("#{nds[director_index][:name]}" => "#{nds[director_index][:movies][movie_index][:worldwide_gross]}")
+  end
   #
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
